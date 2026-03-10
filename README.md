@@ -5,10 +5,13 @@ This project analyzes social media engagement trends across multiple platforms u
 
 The dataset includes metrics such as views, likes, shares, and comments from several social media platforms.
 
+---
+
 ## Dataset
 Source: Kaggle – Viral Social Media Trends Dataset
 
 The dataset includes the following fields:
+
 - Platform
 - Hashtag
 - Content Type
@@ -18,6 +21,8 @@ The dataset includes the following fields:
 - Shares
 - Comments
 
+---
+
 ## Tools Used
 - Python
 - Pandas
@@ -26,38 +31,52 @@ The dataset includes the following fields:
 - Jupyter Notebook
 - VS Code
 
+---
+
 ## Data Preparation
 An engagement metric was created to measure total interaction per post.
 
-
+```
 Engagement = Likes + Shares + Comments
-
+```
 
 This metric was used to analyze how audiences interact with content across different platforms and topics.
+
+---
 
 ## Analysis
 
 ### Engagement by Platform
-- YouTube generated the highest total engagement (~441.8 million).
-- TikTok (~403.8M) and Instagram (~402.9M) showed very similar engagement levels.
-- Twitter (~386.0M) had the lowest engagement among the four platforms.
+- **YouTube** generated the highest total engagement (~441.8 million).
+- **TikTok (~403.8M)** and **Instagram (~402.9M)** showed very similar engagement levels.
+- **Twitter (~386.0M)** had the lowest engagement among the four platforms.
 
 ### Engagement by Hashtag
-- #Education (~176.8M) and #Fitness (~176.3M) produced the highest engagement.
-- #Comedy (~165.6M) and #Tech (~164.2M) also performed strongly.
-- #Gaming (~153.0M) had the lowest engagement in the dataset.
+- **#Education (~176.8M)** and **#Fitness (~176.3M)** produced the highest engagement.
+- **#Comedy (~165.6M)** and **#Tech (~164.2M)** also performed strongly.
+- **#Gaming (~153.0M)** had the lowest engagement in the dataset.
 
 ### Engagement by Region
-- The USA generated the highest engagement (~218.7M).
-- Canada (~218.2M) and the UK (~212.6M) followed closely.
-- Germany (~180.2M) showed the lowest engagement.
+- The **USA generated the highest engagement (~218.7M)**.
+- **Canada (~218.2M)** and the **UK (~212.6M)** followed closely.
+- **Germany (~180.2M)** showed the lowest engagement.
+
+---
 
 ## Visualizations
 
-Charts generated during the analysis are saved in the **outputs** folder:
-- Engagement by Platform
-- Engagement by Hashtag
-- Engagement by Region
+Charts generated during the analysis are saved in the **outputs** folder.
+
+### Engagement by Platform
+![Engagement by Platform](outputs/engagement_by_platform.png)
+
+### Engagement by Hashtag
+![Engagement by Hashtag](outputs/engagement_by_hashtag.png)
+
+### Engagement by Region
+![Engagement by Region](outputs/engagement_by_region.png)
+
+---
 
 ## SQL Example
 
@@ -70,14 +89,20 @@ SELECT
 FROM social_media_engagement
 GROUP BY Platform
 ORDER BY Total_Engagement DESC;
-Project Structure
+```
+
+---
+
+## Project Structure
+
+```
 social-media-engagement-analysis
 │
 ├── data
-│   └── dataset.csv
+│   └── Cleaned_Viral_Social_Media_Trends.csv
 │
 ├── notebooks
-│   └── analysis.ipynb
+│   └── social_media_analysis.ipynb
 │
 ├── outputs
 │   ├── engagement_by_platform.png
@@ -85,10 +110,11 @@ social-media-engagement-analysis
 │   └── engagement_by_region.png
 │
 └── README.md
-Key Takeaways
+```
 
-Video-focused platforms tend to generate the most engagement.
+---
 
-Hashtags related to education and fitness show strong interaction levels.
-
-Engagement levels are fairly consistent globally, with slight regional differences.
+## Key Takeaways
+- Video-focused platforms tend to generate the most engagement.
+- Hashtags related to education and fitness show strong interaction levels.
+- Engagement levels are fairly consistent globally, with slight regional differences.
